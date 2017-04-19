@@ -2,13 +2,23 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
+" Color Schemes
+Plugin 'tomasr/molokai'
 
+" Files
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'kien/ctrlp.vim'
+
+" Productivity measurement
+Plugin 'wakatime/vim-wakatime'
 call vundle#end()
+
+
 filetype plugin indent on
 
 
@@ -16,3 +26,6 @@ filetype plugin indent on
 
 " Open NERDTREE when VIM starts up
 autocmd vimenter * NERDTree
+
+colo molokai
+syntax on
