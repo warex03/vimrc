@@ -13,6 +13,7 @@ Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
 
 " Productivity measurement
 Plugin 'wakatime/vim-wakatime'

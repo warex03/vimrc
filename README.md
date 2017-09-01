@@ -7,8 +7,11 @@ To setup:
 3) Clone this repo and symlink the .vimrc
 
 ```
-git clone https://github.com/warex03/vimrc.git ~/.vim/
+git clone https://github.com/warex03/vimrc.git ~/.vim/vimrc
 ln -sf ~/.vim/vimrc/.vimrc ~/.vimrc
 ```
 
+4) Run Vundle in VIM
+
+`:PluginInstall`
 
