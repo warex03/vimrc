@@ -1,5 +1,11 @@
 set nocompatible
-filetype off
+
+" Indentations
+set noautoindent
+set nocindent
+set nosmartindent
+
+filetype plugin on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -20,9 +26,6 @@ Plugin 'wakatime/vim-wakatime'
 call vundle#end()
 
 
-filetype plugin indent on
-
-
 " Put custom scripts here
 
 " Open NERDTREE when VIM starts up
@@ -30,3 +33,6 @@ autocmd vimenter * NERDTree
 
 colo molokai
 syntax on
+
+" Keyboard mappings
+map <C-n> :NERDTreeToggle<CR>
