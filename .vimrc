@@ -120,6 +120,9 @@ call vundle#end()
 " Open NERDTREE when VIM starts up
 autocmd vimenter * NERDTree
 
+" NERDTree fix for ^G characters
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
 syntax on
 set background=dark
 colorscheme solarized
@@ -139,3 +142,4 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:rspec_runner = "os_x_iterm"
+
