@@ -21,8 +21,10 @@ set nocompatible
 
 " Indentations
 set noautoindent
-set nocindent
-set nosmartindent
+" set nocindent
+" set nosmartindent
+set smartindent
+filetype indent off
 
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
@@ -92,6 +94,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'yonchu/accelerated-smooth-scroll'
