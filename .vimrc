@@ -99,6 +99,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " Snippets
 Plugin 'tomtom/tlib_vim'
