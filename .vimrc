@@ -48,8 +48,8 @@ set textwidth=80
 set colorcolumn=+1
 
 " Numbers
-set number
 set numberwidth=5
+set relativenumber
 
 " Tab completion
 " will insert tab at beginning of line,
