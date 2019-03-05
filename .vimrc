@@ -96,6 +96,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-endwise'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'yonchu/accelerated-smooth-scroll'
@@ -141,10 +143,12 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Settings 
+" Settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:rspec_runner = "os_x_iterm"
+" Rspec runner
+let g:rspec_runner = "os_x_iterm2"
+" let g:rspec_command = "compiler rspec | set makeprg=zeus | Make rspec {spec}"
 
