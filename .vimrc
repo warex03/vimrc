@@ -10,7 +10,7 @@ set noswapfile	  " http://robots.thoughtbot.com/post/18739402579/global-gitignor
 set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
-set incsearch     " do incremental searching
+set incsearch     " incremental searching
 set laststatus=2  " always display the status line
 set autowrite     " automatically :write before running commands
 
@@ -87,12 +87,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Color Schemes
-Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 Plugin 'altercation/vim-colors-solarized'
 
 " Files
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
@@ -103,19 +101,26 @@ Plugin 'bling/vim-airline'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'jremmen/vim-ripgrep'
 
 " Snippets
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+" CoC
+Plugin 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
+
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+
 " Elixir
-Plugin 'slashmili/alchemist.vim'
-Plugin 'elixir-editors/vim-elixir'
+" Plugin 'slashmili/alchemist.vim'
+" Plugin 'elixir-editors/vim-elixir'
 
 " Ruby
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-rails'
+" Plugin 'thoughtbot/vim-rspec'
+" Plugin 'tpope/vim-rails'
 
 " Productivity measurement
 Plugin 'wakatime/vim-wakatime'
@@ -125,10 +130,10 @@ call vundle#end()
 " Put custom scripts here
 
 " Open NERDTREE when VIM starts up
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " NERDTree fix for ^G characters
-let g:NERDTreeNodeDelimiter = "\u00a0"
+" let g:NERDTreeNodeDelimiter = "\u00a0"
 
 syntax on
 set background=dark
@@ -145,10 +150,16 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Settings
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" netrw configs
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 2    " open files in new vertical split
+let g:netrw_winsize = 25
+
 " Rspec runner
-let g:rspec_runner = "os_x_iterm2"
+" let g:rspec_runner = "os_x_iterm2"
 " let g:rspec_command = "compiler rspec | set makeprg=zeus | Make rspec {spec}"
 
